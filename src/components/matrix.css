@@ -1,0 +1,107 @@
+.matrix {
+  padding: 8px 8px 14px;
+}
+.matrix-scroll {
+  position: relative; /* contains the visually hidden labels so they cannot widen the page */
+  overflow-x: auto;
+}
+.matrix table {
+  width: 100%;
+  min-width: 880px;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  font-size: 0.9rem;
+}
+.matrix thead th {
+  position: sticky;
+  top: 0;
+  padding: 8px 6px;
+  font-weight: 560;
+  color: var(--ink-2);
+  text-align: center;
+}
+.matrix thead button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  background: transparent;
+  padding: 0.35em 0.7em;
+  border-radius: 999px;
+  font-weight: 560;
+  font-size: 0.86rem;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.matrix thead button:hover,
+.matrix thead button[data-on='true'] {
+  background: var(--paper-2);
+  color: var(--ink);
+}
+.matrix thead button i {
+  font-style: normal;
+  width: 0.8em;
+}
+.matrix tbody th {
+  text-align: left;
+  padding: 4px 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.matrix tbody th button {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+.matrix tbody td {
+  padding: 10px 6px;
+  text-align: center;
+  background: var(--surface-2);
+  transition: background 0.2s;
+}
+.matrix tbody tr td:first-of-type {
+  border-radius: 12px 0 0 12px;
+}
+.matrix tbody tr td:last-of-type {
+  border-radius: 0 12px 12px 0;
+}
+.matrix tbody tr:hover td,
+.matrix tbody tr[data-active='true'] td {
+  background: var(--paper-2);
+}
+.matrix td[data-hot='true'] {
+  background: #eef3ff;
+}
+.meter {
+  display: inline-flex;
+  gap: 3px;
+}
+.meter i {
+  width: 9px;
+  height: 18px;
+  border-radius: 3px;
+  background: var(--line-2);
+}
+td[data-v='4'] .meter i[data-on='true'] {
+  background: var(--good);
+}
+td[data-v='3'] .meter i[data-on='true'] {
+  background: #7cc79d;
+}
+td[data-v='2'] .meter i[data-on='true'] {
+  background: #f0b34a;
+}
+td[data-v='1'] .meter i[data-on='true'] {
+  background: var(--bad);
+}
+.matrix-hint {
+  margin: 8px 14px 0;
+  color: var(--ink-3);
+  font-size: 0.86rem;
+  min-height: 1.4em;
+  max-width: none;
+}
+.matrix-hint b {
+  color: var(--ink-2);
+}

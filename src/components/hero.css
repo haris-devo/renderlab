@@ -1,0 +1,126 @@
+.hero {
+  padding-top: clamp(40px, 7vw, 96px);
+  padding-bottom: calc(var(--section-gap) / 3);
+}
+.hero h1 {
+  max-width: 15ch;
+}
+.hero-lede {
+  margin-top: 26px;
+  font-size: clamp(1.1rem, 1.6vw, 1.32rem);
+  color: var(--ink-2);
+  line-height: 1.5;
+  max-width: 54ch;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+.hero-cta .btn {
+  padding: 0.85em 1.5em;
+  font-size: 1rem;
+}
+
+.race {
+  margin-top: clamp(32px, 5vw, 60px);
+  padding: clamp(14px, 2.4vw, 28px);
+}
+.race-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 2.2vw, 28px);
+}
+.race-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  align-content: start;
+  min-width: 0;
+}
+.race-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+.race-head .dot {
+  margin-top: 0.5em;
+  width: 11px;
+  height: 11px;
+}
+.race-head strong {
+  display: block;
+  font-size: 1.12rem;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+.race-head span {
+  color: var(--ink-2);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  display: block;
+}
+.race-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
+}
+.race-stats div {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  opacity: 0.55;
+  transition: opacity 0.25s, background 0.25s, border-color 0.25s;
+}
+.race-stats div[data-on='true'] {
+  opacity: 1;
+  background: var(--soft);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.race-stats dt {
+  font-size: 0.74rem;
+  color: var(--ink-2);
+  line-height: 1.25;
+}
+.race-stats dd {
+  margin: 3px 0 0;
+  font-weight: 620;
+  font-size: 1.22rem;
+  letter-spacing: -0.02em;
+}
+.race-foot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+.race-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--paper-2);
+  overflow: hidden;
+}
+.race-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--c-csr), var(--c-ssr), var(--c-rsc));
+}
+.race-foot output {
+  min-width: 4.4em;
+  text-align: right;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .race-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .race-col {
+    max-width: 460px;
+  }
+}

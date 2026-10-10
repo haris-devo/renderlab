@@ -1,0 +1,223 @@
+.dc {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(18px, 2.6vw, 36px);
+  align-items: start;
+}
+.dc-left {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  min-width: 0;
+}
+.dc-start {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+.dc-start > span {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.dc-start .seg button {
+  font-size: 0.84rem;
+  padding: 0.42em 0.9em;
+}
+
+.dc-q {
+  margin: 0;
+  padding: 18px 20px 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 4px;
+  min-width: 0;
+}
+.dc-q legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  font-weight: 620;
+  font-size: 1.04rem;
+  letter-spacing: -0.01em;
+}
+.dc-q .hint {
+  clear: both;
+  margin-bottom: 8px;
+}
+.dc-opts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+}
+.dc-opts button {
+  display: grid;
+  gap: 2px;
+  align-content: start;
+  text-align: left;
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line-2);
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color 0.16s, background 0.16s, box-shadow 0.16s;
+}
+.dc-opts button:hover {
+  border-color: var(--ink-3);
+}
+.dc-opts button[aria-checked='true'] {
+  border-color: var(--ink);
+  background: #f2f6ff;
+  box-shadow: 0 0 0 3px rgba(13, 26, 44, 0.08);
+}
+.dc-opts b {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.dc-opts span {
+  color: var(--ink-3);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.dc-right {
+  position: sticky;
+  top: 84px;
+  min-width: 0;
+}
+.dc-result {
+  padding: 22px;
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-2);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+.dc-kicker {
+  font-weight: 620;
+  font-size: 0.95rem;
+}
+.dc-rank {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+.dc-rank li {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.dc-rank li[data-open='true'] {
+  background: var(--soft);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.dc-rank li[data-top='true'] {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.dc-rank li[data-blocked='true'] {
+  opacity: 0.6;
+}
+.dc-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) minmax(60px, 90px) 28px;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+.dc-pos {
+  font-weight: 650;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.dc-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--paper-2);
+  overflow: hidden;
+}
+.dc-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 0.4s cubic-bezier(0.3, 0.9, 0.3, 1);
+}
+.dc-score {
+  font-weight: 650;
+  text-align: right;
+}
+.dc-more {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  padding: 0 16px 16px 50px;
+}
+.dc-tagline {
+  font-weight: 560;
+  color: var(--ink);
+  max-width: none;
+}
+.dc-why h4 {
+  margin: 0 0 4px;
+  font-size: 0.86rem;
+  color: var(--ink-2);
+}
+.dc-why ul {
+  margin: 0;
+  padding-left: 1.1em;
+  display: grid;
+  gap: 5px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.dc-why[data-tone='good'] li::marker {
+  color: var(--good);
+}
+.dc-why[data-tone='bad'] li::marker {
+  color: var(--bad);
+}
+.dc-switch {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  max-width: none;
+}
+.dc-switch b {
+  color: var(--ink);
+}
+.dc-blocked {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+.dc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dc-note {
+  color: var(--ink-3);
+  font-size: 0.82rem;
+  max-width: none;
+}
+.dc-note code {
+  font-size: 0.92em;
+}
+
+@media (max-width: 1000px) {
+  .dc {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dc-right {
+    position: static;
+    order: -1;
+  }
+}
