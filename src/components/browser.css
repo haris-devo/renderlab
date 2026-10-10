@@ -99,9 +99,10 @@
 }
 .bw-page {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 3.4cqw;
   padding: 3.4cqw;
-  font-size: clamp(10px, 3.1cqw, 15px);
+  font-size: clamp(7px, 3.1cqw, 15px);
   min-height: 210px;
 }
 
@@ -205,6 +206,9 @@
   }
 }
 
+.bw-main > * {
+  min-width: 0;
+}
 .bw-info {
   display: grid;
   align-content: start;
@@ -216,6 +220,7 @@
   font-weight: 620;
   letter-spacing: -0.02em;
   line-height: 1.1;
+  overflow-wrap: anywhere;
   animation: bw-fade 0.3s ease both;
 }
 .bw-stars {

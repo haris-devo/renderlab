@@ -116,11 +116,8 @@
   font-weight: 600;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 640px) {
   .race-grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-  .race-col {
-    max-width: 460px;
   }
 }
