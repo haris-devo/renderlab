@@ -40,7 +40,7 @@ export function IsrLab() {
   const [speed, setSpeed] = useState<(typeof SPEEDS)[number]>(5);
   const [prebuilt, setPrebuilt] = useState(true);
   const [revalidate, setReval] = useState(20);
-  const [ref, seen] = useSeenOnce<HTMLDivElement>(0.3);
+  const [ref, seen] = useSeenOnce<HTMLDivElement>(0.15);
 
   useEffect(() => {
     if (seen && !prefersReducedMotion()) setRunning(true);

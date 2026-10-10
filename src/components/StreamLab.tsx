@@ -27,7 +27,7 @@ export function StreamLab() {
   const horizon = Math.ceil(Math.max(plan.complete, baseline.complete) / 100) * 100 + 400;
 
   const clock = useClock(horizon, { autoplay: false });
-  const [ref, seen] = useSeenOnce<HTMLDivElement>(0.3);
+  const [ref, seen] = useSeenOnce<HTMLDivElement>(0.12);
   const started = useRef(false);
   useEffect(() => {
     if (seen && !started.current) {

@@ -133,7 +133,7 @@ export function Lab({ setup, setSetup, strategy, setStrategy, compare, setCompar
   const horizon = Math.ceil(horizonOf(b ? [a, b] : [a]) / 100) * 100 + 200;
 
   const clock = useClock(horizon, { autoplay: false });
-  const [stageRef, seen] = useSeenOnce<HTMLDivElement>(0.3);
+  const [stageRef, seen] = useSeenOnce<HTMLDivElement>(0.08);
   const started = useRef(false);
   useEffect(() => {
     if (seen && !started.current) {
